@@ -1,0 +1,347 @@
+.el-button {
+    height: 35px !important;
+    padding: 10px !important;
+    font-size: 13px !important;
+}
+
+.el-button + .el-button {
+    margin-left: 5px !important;
+}
+
+.el-button--dark {
+    height: 30px !important;
+    padding: 0 10px !important;
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+    color: #f2f2f2;
+}
+
+.el-button--primary {
+    height: 30px !important;
+    padding: 0 10px !important;
+    background-color: #223cac !important;
+    border-color: #193192 !important;
+}
+
+.el-button--success {
+    height: 30px !important;
+    padding: 0 10px !important;
+    background-color: #21610b !important;
+    border-color: #174407 !important;
+}
+
+.el-button--warning {
+    height: 30px !important;
+    padding: 0 10px !important;
+    background-color: #cd7b14 !important;
+    border-color: #b16a0f !important;
+}
+
+.el-button--danger {
+    height: 30px !important;
+    padding: 0 10px !important;
+    background-color: #c10f0f !important;
+    border-color: #ac0c0c !important;
+}
+
+.el-button--info {
+    height: 30px !important;
+    padding: 0 10px !important;
+    color: #333333 !important;
+    background-color: #dddddd !important;
+    border-color: #c9c9c9 !important;
+}
+
+.el-button.is-circle {
+    height: 35px !important;
+    border-radius: 3px !important;
+    padding: 0 8px !important;
+    font-size: 16px !important;
+}
+
+
+.el-alert__title {
+    font-size: 14px !important;
+}
+
+.el-alert--info .el-alert__description, .el-alert .el-alert__description {
+    font-size: 14px !important;
+}
+
+.el-alert--info.is-dark {
+    background-color: #f5f5f5 !important;
+    border: #e5e5e5 1px solid !important;
+    color: #333333 !important;
+}
+
+.el-alert.is-dark .el-alert__closebtn, .el-alert.is-dark .el-alert__description {
+    color: #333333;
+}
+
+.el-alert--warning.is-dark {
+    background-color: #ffeeee !important;
+    border: #ffe5e5 1px solid !important;
+    color: #333333 !important;
+}
+
+.description-emphasize .el-alert__description {
+    color: red !important;
+}
+
+
+div.in-contents .el-row {
+    margin-bottom: 10px !important;
+}
+
+div.in-contents .el-row:last-child {
+    margin-bottom: 0 !important;
+}
+
+
+.el-form-item__content {
+    line-height: 35px !important;
+}
+
+.el-form-item {
+    margin-bottom: 0 !important;
+}
+
+.el-form-item__error {
+    font-size: 11px !important;
+    position: relative !important;
+    font-weight: 600 !important;
+}
+
+.el-form-item__label {
+    font-size: 14px !important;
+    line-height: 35px !important;
+    color: #333333 !important;
+    padding-right: 5px !important;
+}
+
+.el-input__inner {
+    height: 35px !important;
+    line-height: 1 !important;
+}
+
+.big-size-input-box > .el-textarea__inner {
+    height: calc(100vh - 30px - 88px - 50px - 34px - 35px - 45px - 97px - 46px) !important;
+}
+
+.el-select {
+    width: 100% !important;
+}
+
+.el-date-editor.el-input, .el-date-editor.el-input__inner {
+    width: 100% !important;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #223cac !important;
+}
+
+.el-pagination {
+    text-align: center !important;
+}
+
+.info-list-input > .el-input__inner {
+    height: 30px !important;
+}
+
+.info-list-date-picker.el-input {
+    width: 200px !important;
+}
+
+.info-list-date-picker > .el-input__inner {
+    width: 200px !important;
+}
+
+.el-calendar-table .el-calendar-day {
+    height: auto !important;
+    min-height: 85px !important;
+    line-height: 1.5 !important;
+}
+
+.el-calendar-table .el-calendar-day strong {
+    font-weight: 600 !important;
+}
+
+.el-backtop, .el-calendar-table td.is-today {
+    color: #223cac !important;
+}
+
+.el-button--mini {
+    height: 18px !important;
+}
+
+.el-calendar__title {
+    font-weight: 600 !important;
+    font-size: 16px;
+}
+
+.el-calendar__header .el-calendar__button-group .el-button--mini {
+    height: 30px !important;
+}
+
+div.color-red input.el-input__inner {
+    color: #c90c10;
+}
+
+/*seat-file-tabs*/
+div.seat-file-tabs div.el-tabs__header {
+    position: static !important;
+    border: none !important;
+}
+
+div.seat-file-tabs div.el-tabs__nav-wrap {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    position: static !important;
+}
+
+div.seat-file-tabs span.el-tabs__nav-prev {
+    display: none !important;
+}
+
+div.seat-file-tabs span.el-tabs__nav-next {
+    display: none !important;
+}
+
+div.seat-file-tabs div.el-tabs__nav {
+    white-space: normal !important;
+    transform: none !important;
+    border: none !important;
+}
+
+div.seat-file-tabs div.el-tabs__item {
+    width: 180px;
+    text-align: center;
+    border: 1px solid #e4e7ed !important;
+    margin: 5px;
+}
+
+div.important-is-emergency label {
+    font-weight: bold;
+    color: #c90c10 !important;
+}
+
+div.el-collapse {
+    border: none !important;
+}
+
+div.el-collapse-item__header {
+    border-bottom: none !important;
+    height: auto !important;
+    line-height: 0 !important;
+    font-size: 14px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+div.el-collapse-item__header span {
+    color: #666 !important;
+}
+
+div.el-collapse-item__wrap {
+    border-bottom: none !important;
+}
+
+div.el-collapse-item__content {
+    padding-bottom: 0 !important;
+}
+
+i.el-collapse-item__arrow {
+    color: #000 !important;
+    font-size: 16px !important;
+}
+
+.el-dialog {
+    background-color: #f8f9fa !important;
+}
+
+.el-dialog .el-dialog__header {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+}
+
+.el-dialog .el-dialog__body .el-form {
+    padding: 15px !important;
+    border: #eeeeee 1px solid !important;
+    border-radius: 5px !important;
+    background-color: #ffffff !important;
+}
+
+.full-size-modal .el-dialog {
+    width: 90% !important;
+}
+
+div.el-transfer {
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+div.el-transfer-panel {
+    display: block !important;
+    width: 50% !important;
+    height: calc(100vh - 204px) !important;
+    overflow: hidden !important;
+}
+
+div.el-transfer-panel__body {
+    height: calc(100vh - 264px) !important;
+}
+
+div.el-transfer-panel__list {
+    height: calc(100vh - 309px) !important;
+    overflow-y: auto !important;
+}
+
+div.el-transfer__buttons {
+    padding: 0 15px !important;
+}
+
+div.el-transfer__buttons button {
+    display: block !important;
+}
+
+div.el-transfer__buttons button:nth-child(2) {
+    margin-left: 0 !important;
+}
+
+div.large-dialog > div.el-dialog {
+    width: 70% !important;
+}
+
+div.scroll-dialog > div.el-dialog {
+    margin-top: 10vh !important;
+}
+
+div.scroll-dialog > div.el-dialog > div.el-dialog__body {
+    height: 60vh !important;
+    overflow-y: scroll !important;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+
+div.scroll-dialog > div.el-dialog > div.el-dialog__body::-webkit-scrollbar {
+    display: none !important;
+}
+
+div.horizontal-slide-table > div.el-table__body-wrapper {
+    height: 85vh !important;
+    overflow: auto !important;
+}
+
+div.el-table__header-wrapper table.el-table__header thead tr th {
+    color: #333;
+    font-weight: bold;
+    background-color: #F5F5F5;
+    border-bottom: 2px solid #333 !important;
+}
+
+div.primary-table div.el-table__body-wrapper tbody tr td:last-child {
+    color: #000000;
+    font-weight: 600 !important;
+}

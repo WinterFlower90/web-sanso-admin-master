@@ -1,0 +1,118 @@
+div.sq-error-frame {
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+div.sq-error-frame div.contents {
+    padding-top: calc(50vh - 110px);
+}
+
+
+div.sq-login-frame {
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+
+div.sq-default-frame > section.frame-left {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #f8f9fa;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+div.sq-default-frame > section.frame-right {
+    height: 100vh;
+    margin-left: 220px;
+}
+
+header.sq-header {
+    width: 100%;
+    height: 30px;
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    color: #ffffff;
+}
+
+header.sq-header div.sq-bread {
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 13px;
+    position: relative;
+    background-color: #333333;
+    z-index: 100;
+}
+
+
+section.sq-main-sidebar-info {
+    height: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgb(56,88,225);
+    background: -moz-linear-gradient(180deg, rgba(56,88,225,1) 0%, rgb(32, 58, 170) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(56,88,225,1) 0%,rgba(32,58,170,1) 100%);
+    background: linear-gradient(180deg, rgba(56,88,225,1) 0%,rgba(32,58,170,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3858e1', endColorstr='#4aabe5',GradientType=1 );
+}
+section.sq-main-sidebar-info > div.logo > img {
+    height: 40px;
+}
+section.sq-main-sidebar-info > div.info {
+    color: #ffffff;
+}
+
+section.sq-main-sidebar-menu {
+    height: calc(100vh - 75px - 51px - 56px - 56px - 25px);
+    overflow-y: auto;
+    padding: 10px;
+}
+section.sq-main-sidebar-menu > div.item {
+    margin-bottom: 10px;
+}
+section.sq-main-sidebar-menu > div.item > div.in-title {
+    background-color: #eeeeee;
+    padding: 7px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    color: #333333;
+    font-weight: 600;
+}
+section.sq-main-sidebar-menu > div.item > div.in-title i {
+    margin-right: 5px;
+}
+section.frame-right > div.contents-body {
+    height: calc(100vh - 30px);
+    margin-top: 30px;
+    padding: 15px;
+    overflow: auto;
+}
+
+
+/*loading*/
+div.custom-loading-container {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh);
+    z-index: 99999;
+    top: 0;
+    left: 0;
+}
+div.custom-loading-container div.custom-loading-back {
+    width: 100%;
+    height: calc(100vh);
+    background-color: #ffffff;
+    opacity: 0.5;
+}
+div.custom-loading-container div.custom-loading-contents {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: calc(100vh / 2 - 50px);
+    left: 0;
+    z-index: 100000;
+}

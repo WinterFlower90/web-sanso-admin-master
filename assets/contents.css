@@ -1,0 +1,30 @@
+div.error-box {
+    width: 300px;
+    border: #eeeeee 1px solid;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+    padding: 20px 0;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    -webkit-box-shadow: 1px 1px 1px 1px #EDEDED;
+    box-shadow: 1px 1px 1px 1px #EDEDED;
+}
+div.error-box div.in-icon i {
+    font-size: 84px;
+    color: #666666;
+}
+div.error-box div.in-code {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+div.sq-login-box {
+    width: 350px;
+    margin: 0 auto;
+    padding-top: calc(50vh - 153px);
+}
+div.sq-login-box div.img-box img {
+    width: 100%;
+}
