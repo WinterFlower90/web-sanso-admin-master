@@ -16,4 +16,13 @@ export default {
     [Constants.DO_CREATE]: (store, payload) => {
         return axios.post(apiUrls.DO_CREATE, payload)
     },
+    [Constants.DO_ENABLE_FALSE]: (store, payload) => {
+        return axios.put(apiUrls.DO_ENABLE_FALSE.replace('{noticeId}', payload.id))
+    },
+    [Constants.DO_UPDATE]: (store, payload) => {
+        return axios.put(apiUrls.DO_UPDATE.replace('{noticeId}', payload.id), payload)
+    },
+    [Constants.DO_NOTICE_DETAIL]: (store, payload) => {
+        return axios.get(apiUrls.DO_NOTICE_DETAIL.replace('{noticeId}', payload.id))
+    },
 }

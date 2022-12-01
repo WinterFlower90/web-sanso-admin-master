@@ -16,7 +16,7 @@ export default {
             {
                 rel: 'stylesheet',
                 type: 'text/css',
-                href: 'https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400&display=swap'
+                href: 'https://fonts.googleapis.com/css2?family=Song+Myung:wght@400&display=swap'
             },
 
         ]
