@@ -1,6 +1,6 @@
 <template>
     <section class="sq-main-sidebar-info">
-        <div class="logo mb-1 pt-1"><img src="/images/logo.png" alt="logo" /></div>
+        <div class="logo mb-1 pt-1"><img src="/images/kbg.png" alt="logo" /></div>
         <div class="info">
             {{ nickName }}님
         </div>

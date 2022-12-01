@@ -50,20 +50,20 @@ header.sq-header div.sq-bread {
 
 
 section.sq-main-sidebar-info {
-    height: 75px;
+    height: 100px;
     padding-left: 10px;
     padding-right: 10px;
-    background: rgb(56,88,225);
-    background: -moz-linear-gradient(180deg, rgba(56,88,225,1) 0%, rgb(32, 58, 170) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(56,88,225,1) 0%,rgba(32,58,170,1) 100%);
-    background: linear-gradient(180deg, rgba(56,88,225,1) 0%,rgba(32,58,170,1) 100%);
+    background-image: linear-gradient(to top, #bdf2ff, #fffcbd);
+    /*background: -moz-linear-gradient(180deg, rgba(56,88,225,1) 0%, rgb(32, 58, 170) 100%);*/
+    /*background: -webkit-linear-gradient(180deg, rgba(56,88,225,1) 0%,rgba(32,58,170,1) 100%);*/
+    /*background: linear-gradient(180deg, rgba(56,88,225,1) 0%,rgba(32,58,170,1) 100%);*/
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3858e1', endColorstr='#4aabe5',GradientType=1 );
 }
 section.sq-main-sidebar-info > div.logo > img {
-    height: 40px;
+    height: 50px;
 }
 section.sq-main-sidebar-info > div.info {
-    color: #ffffff;
+    color: #000000;
 }
 
 section.sq-main-sidebar-menu {
@@ -75,11 +75,11 @@ section.sq-main-sidebar-menu > div.item {
     margin-bottom: 10px;
 }
 section.sq-main-sidebar-menu > div.item > div.in-title {
-    background-color: #eeeeee;
+    background-image: linear-gradient(to right, #bdf2ff, #fffcbd);
     padding: 7px;
     border-radius: 3px;
     margin-bottom: 10px;
-    color: #333333;
+    color: #8a8a8a;
     font-weight: 600;
 }
 section.sq-main-sidebar-menu > div.item > div.in-title i {
@@ -92,6 +92,18 @@ section.frame-right > div.contents-body {
     overflow: auto;
 }
 
+section.frame-right > div.contents-body::after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    background-image: url("static/images/bg.png");
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
 
 /*loading*/
 div.custom-loading-container {

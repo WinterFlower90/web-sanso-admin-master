@@ -11,6 +11,9 @@
                 </li>
             </ul>
         </div>
+        <audio loop controls>
+            <source src="/audio/2.mp3" type="audio/mp3">
+        </audio>
     </section>
 </template>
 
@@ -27,3 +30,10 @@ export default {
     }
 }
 </script>
+<style>
+div {
+    font-family: 'Song Myung', sans-serif;
+    font-size: 24px;
+}
+</style>
+

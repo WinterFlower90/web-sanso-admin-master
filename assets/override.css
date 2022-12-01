@@ -19,8 +19,8 @@
 .el-button--primary {
     height: 30px !important;
     padding: 0 10px !important;
-    background-color: #223cac !important;
-    border-color: #193192 !important;
+    background-color: #34aefa !important;
+    /*border-color: #193192 !important;*/
 }
 
 .el-button--success {
