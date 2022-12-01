@@ -2,6 +2,7 @@ export default {
     DO_NOTICE_LIST_DATE: 'notice/doNoticeListDate',
     DO_NOTICE_LIST_ALL: 'notice/doNoticeListAll',
 
+    DO_CREATE: 'notice/doCreate',
 
     FETCH_NOTICE_LIST_ALL: 'notice/fetchNoticeListAll',
 

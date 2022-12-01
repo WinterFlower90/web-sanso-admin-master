@@ -9,7 +9,9 @@ const state = () => ({
         {
             parentName: '공지사항',
             menuLabel: [
+                { id: 'NOTICE_ADD', icon: 'el-icon-tickets', currentName: '공지사항 작성', link: '/notice/form', isShow: false },
                 { id: 'NOTICE_LIST_ALL', icon: 'el-icon-tickets', currentName: '공지사항 리스트', link: '/notice/list', isShow: true },
+                { id: 'NOTICE_LIST_ALL_FILTER', icon: 'el-icon-tickets', currentName: '공지사항 리스트(필터)', link: '/notice/list-filter', isShow: true },
 
             ]
         },

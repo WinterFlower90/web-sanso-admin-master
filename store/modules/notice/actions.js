@@ -13,13 +13,7 @@ export default {
     [Constants.DO_NOTICE_LIST_ALL]: (store) => {
         return axios.get(apiUrls.DO_NOTICE_LIST_ALL)
     },
-    // [Constants.DO_DETAIL]: (store, payload) => {
-    //     return axios.get(apiUrls.DO_DETAIL.replace('{nickName}', payload.id))
-    // },
-    // [Constants.DO_UPDATE]: (store, payload) => {
-    //     return axios.get(apiUrls.DO_UPDATE.replace('{id}', payload.id))
-    // },
-    // [Constants.DO_DELETE]: (store, payload) => {
-    //     return axios.get(apiUrls.DO_DELETE.replace('{id}', payload.id))
-    // },
+    [Constants.DO_CREATE]: (store, payload) => {
+        return axios.post(apiUrls.DO_CREATE, payload)
+    },
 }
