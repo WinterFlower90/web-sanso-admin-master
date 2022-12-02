@@ -11,9 +11,14 @@
                 </li>
             </ul>
         </div>
-        <audio loop controls>
+        <div class="container-audio">
+        <audio controls loop="loop" autoplay>
             <source src="/audio/2.mp3" type="audio/mp3">
+            <source src="/audio/1.mp3" type="audio/mp3">
+            <source src="/audio/3.mp3" type="audio/mp3">
+            <source src="/audio/4.mp3" type="audio/mp3">
         </audio>
+        </div>
     </section>
 </template>
 
@@ -35,5 +40,18 @@ div {
     font-family: 'Song Myung', sans-serif;
     font-size: 24px;
 }
+
+.container-audio {
+    width: 150px;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #f8f9fa;
+    margin: 20px auto;
+    overflow: hidden;
+    top:800px;
+}
+
 </style>
 

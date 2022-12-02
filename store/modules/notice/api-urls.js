@@ -7,5 +7,6 @@ export default {
     DO_ENABLE_FALSE: `${BASE_URL}/enable/{noticeId}`, //put 공지사항 게시 해제하기
     DO_UPDATE: `${BASE_URL}/put/{noticeId}`, //put 공지사항 수정하기
     DO_NOTICE_DETAIL: `${BASE_URL}/detail/{noticeId}`, //get
+    DO_NOTICE_LIST: `${BASE_URL}/list/search/{pageNum}`, //get
     // url만 담당하는 곳이기 때문에 FETCH가 올 수 없음.
 }

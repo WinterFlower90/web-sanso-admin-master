@@ -13,6 +13,15 @@ export default {
     [Constants.DO_NOTICE_LIST_ALL]: (store) => {
         return axios.get(apiUrls.DO_NOTICE_LIST_ALL)
     },
+    [Constants.DO_NOTICE_LIST]: (store, payload) => {
+        let paramArray = []
+        if (payload.params.monthValue != null) paramArray.push(`dateMonth=${payload.params.monthValue}`)
+        if (payload.params.yearValue != null) paramArray.push(`dateYear=${payload.params.yearValue}`)
+        if (payload.params.searchTitle.length >= 1) paramArray.push(`searchTitle=${payload.params.searchTitle}`)
+        let paramText = paramArray.join('&')
+
+        return axios.get(apiUrls.DO_NOTICE_LIST.replace('{pageNum}', payload.pageNum) + '?' + paramText)
+    },
     [Constants.DO_CREATE]: (store, payload) => {
         return axios.post(apiUrls.DO_CREATE, payload)
     },
@@ -20,7 +29,7 @@ export default {
         return axios.put(apiUrls.DO_ENABLE_FALSE.replace('{noticeId}', payload.id))
     },
     [Constants.DO_UPDATE]: (store, payload) => {
-        return axios.put(apiUrls.DO_UPDATE.replace('{noticeId}', payload.id), payload)
+        return axios.put(apiUrls.DO_UPDATE.replace('{noticeId}', payload.noticeId), payload.data)
     },
     [Constants.DO_NOTICE_DETAIL]: (store, payload) => {
         return axios.get(apiUrls.DO_NOTICE_DETAIL.replace('{noticeId}', payload.id))

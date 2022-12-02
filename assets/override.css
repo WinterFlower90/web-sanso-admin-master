@@ -129,12 +129,13 @@ div.in-contents .el-row:last-child {
 }
 
 .el-select {
-    width: 100% !important;
+    width: 100px !important;
 }
 
 .el-date-editor.el-input, .el-date-editor.el-input__inner {
     width: 100% !important;
 }
+
 
 .el-pagination.is-background .el-pager li:not(.disabled).active {
     background-color: #223cac !important;

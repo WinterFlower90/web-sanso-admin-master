@@ -1,13 +1,14 @@
 <template>
     <div>
         <el-button type="primary"  circle @click.native="moveCreate()">새 공지 등록</el-button>
-        <el-button type="primary" icon="el-icon-edit" circle @click.native="moveEdit(item.noticeId)">수정</el-button>
+
         <div v-for="(item, index) in list" v-bind:key="index">
             순서: {{item.noticeId /*이 위에 list는 아래 data() {list}를 받아오는 것임*/ }}
             작성일: {{item.datePost}}
             제목: {{ item.title }}
             작성자 : {{item.writer}}
             <el-button type="success" icon="el-icon-check" circle @click.native="moveDetail(item.noticeId)">상세보기</el-button>
+            <el-button type="primary" icon="el-icon-edit" circle @click.native="moveEdit(item.noticeId)">수정</el-button>
             <div class="container">
                 <table>
                     <thead>
@@ -27,30 +28,6 @@
                         <td>{{item.writer}}</td>
                         <td><el-button type="success" icon="el-icon-check" circle @click.native="moveDetail(item.noticeId)">상세보기</el-button></td>
                     </tr>
-<!--                    <tr>-->
-<!--                        <td>Cell 1</td>-->
-<!--                        <td>Cell 2</td>-->
-<!--                        <td>Cell 3</td>-->
-<!--                        <td>Cell 4</td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>Cell 1</td>-->
-<!--                        <td>Cell 2</td>-->
-<!--                        <td>Cell 3</td>-->
-<!--                        <td>Cell 4</td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>Cell 1</td>-->
-<!--                        <td>Cell 2</td>-->
-<!--                        <td>Cell 3</td>-->
-<!--                        <td>Cell 4</td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>Cell 1</td>-->
-<!--                        <td>Cell 2</td>-->
-<!--                        <td>Cell 3</td>-->
-<!--                        <td>Cell 4</td>-->
-<!--                    </tr>-->
                     </tbody>
                 </table>
             </div>

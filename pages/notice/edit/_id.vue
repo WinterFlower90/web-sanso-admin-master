@@ -84,8 +84,15 @@ export default {
             })
         },
         putData() {
+            let payload = {
+                noticeId: this.detailInfo.noticeId,
+                data: {
+                    note: this.ruleForm.note,
+                    title: this.ruleForm.title
+                }
+            }
             this.$store.commit(this.$customLoadingConstants.FETCH_LOADING_SHOW, true)
-            this.$store.dispatch(this.$noticeConstants.DO_NOTICE_UPDATE, {id: this.detailInfo.id}) // Todo id
+            this.$store.dispatch(this.$noticeConstants.DO_UPDATE, payload) // Todo id
                 .then(res => {
                     this.$toast.success(res.data.msg)
                     this.$store.commit(this.$customLoadingConstants.FETCH_LOADING_SHOW, false)
