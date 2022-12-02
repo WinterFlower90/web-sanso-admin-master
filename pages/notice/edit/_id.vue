@@ -96,7 +96,7 @@ export default {
                 .then(res => {
                     this.$toast.success(res.data.msg)
                     this.$store.commit(this.$customLoadingConstants.FETCH_LOADING_SHOW, false)
-                    this.$router.replace(`/notice/list`)
+                    this.$router.replace(`/notice/list-page`)
                 })
                 .catch(err => {
                     this.$toast.error(err.response.data.msg)

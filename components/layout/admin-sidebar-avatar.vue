@@ -2,7 +2,8 @@
     <section class="sq-main-sidebar-info">
         <div class="logo mb-1 pt-1"><img src="/images/kbg.png" alt="logo" /></div>
         <div class="info">
-            {{ nickName }}님
+            {{ nickName }}님 <br>
+            접속을 환영합니다!
         </div>
     </section>
 </template>

@@ -50,7 +50,7 @@ header.sq-header div.sq-bread {
 
 
 section.sq-main-sidebar-info {
-    height: 100px;
+    height: 120px;
     padding-left: 10px;
     padding-right: 10px;
     background-image: linear-gradient(to top, #bdf2ff, #fffcbd);
@@ -63,7 +63,9 @@ section.sq-main-sidebar-info > div.logo > img {
     height: 50px;
 }
 section.sq-main-sidebar-info > div.info {
-    color: #000000;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px dodgerblue;
+    font-weight: 600;
 }
 
 section.sq-main-sidebar-menu {
@@ -79,11 +81,13 @@ section.sq-main-sidebar-menu > div.item > div.in-title {
     padding: 7px;
     border-radius: 3px;
     margin-bottom: 10px;
-    color: #8a8a8a;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px dodgerblue;
     font-weight: 600;
 }
 section.sq-main-sidebar-menu > div.item > div.in-title i {
     margin-right: 5px;
+    color: dodgerblue;
 }
 section.frame-right > div.contents-body {
     height: calc(100vh - 30px);

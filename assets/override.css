@@ -19,15 +19,15 @@
 .el-button--primary {
     height: 30px !important;
     padding: 0 10px !important;
-    background-color: #34aefa !important;
-    /*border-color: #193192 !important;*/
+    background-image: linear-gradient(to right, #25aae1, #4481eb);
+    box-shadow: 0 2px 10px 0 rgba(65, 132, 234, 0.75);
 }
 
 .el-button--success {
     height: 30px !important;
     padding: 0 10px !important;
-    background-color: #21610b !important;
-    border-color: #174407 !important;
+    background-image: linear-gradient(to right, #0ba360, #3cba92);
+    box-shadow: 0 2px 10px 0 rgba(23, 168, 108, 0.75);
 }
 
 .el-button--warning {
@@ -40,8 +40,8 @@
 .el-button--danger {
     height: 30px !important;
     padding: 0 10px !important;
-    background-color: #c10f0f !important;
-    border-color: #ac0c0c !important;
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
+    box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
 }
 
 .el-button--info {
@@ -59,6 +59,62 @@
     font-size: 16px !important;
 }
 
+/*기본 버튼 세팅 시도*/
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    padding: 5px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 40px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+/*기본 버튼 세팅:컬러 시도*/
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.btn-hover.color-3 {
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.btn-hover.color-4 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
 
 .el-alert__title {
     font-size: 14px !important;

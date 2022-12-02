@@ -18,7 +18,7 @@
         </el-select>
         <el-input class="title-search" placeholder="제목 검색" v-model="searchTitle"></el-input>
         <el-button icon="el-icon-search" @click="getList()" circle> 검색 </el-button>
-        <el-button type="primary"  circle @click.native="moveCreate()">새 공지 등록</el-button>
+        <el-button type="primary" circle @click.native="moveCreate()">새 공지 등록</el-button>
         <div v-for="(item, index) in list">
 <!--            No. : {{ item.noticeId }}-->
 <!--            제목 : {{item.title}}-->
