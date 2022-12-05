@@ -8,7 +8,7 @@
             아이디 : {{item.username}}<br />
             닉네임 : {{ item.nickName }}<br />
             평점 : {{item.avgStarRating}} <br />
-            패널티 : {{item.penalty}}
+            패널티 : {{item.penalty}} <br />
             <el-button type="success" icon="el-icon-check" circle @click.native="moveDetail(item.id)"></el-button>
             <el-button type="primary" icon="el-icon-edit" circle @click.native="moveEdit(item.id)"></el-button>
             <el-button type="danger" icon="el-icon-delete" circle @click.native="delData(item.id)"></el-button>
@@ -72,3 +72,57 @@ export default {
 
 }
 </script>
+<style>
+.card {
+    background-color: #fff;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    border-radius: 2rem;
+    box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+}
+
+.card .banner {
+    background-image: url("static/images/14.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 11rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.card h2.name {
+    text-align: center;
+    padding: 0 2rem 0.5rem;
+    margin: 0;
+}
+
+.card h1.name {
+    text-align: center;
+    padding: 0 0 2.5rem;
+    margin: 0;
+}
+
+.card .title {
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1.2rem 1.2rem 0.2rem;
+}
+
+.card .actions .follow-info {
+    padding: 0 0 1rem;
+    display: flex;
+}
+
+.card .actions .follow-info h2 {
+    text-align: center;
+    width: 50%;
+    margin: 0;
+    box-sizing: border-box;
+}
+</style>

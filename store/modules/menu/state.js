@@ -12,9 +12,7 @@ const state = () => ({
                 { id: 'NOTICE_ADD', icon: 'el-icon-tickets', currentName: '공지사항 작성', link: '/notice/form', isShow: false },
                 { id: 'NOTICE_LIST_EDIT', icon: 'el-icon-tickets', currentName: '공지사항 수정', link: '/', isShow: false },
                 { id: 'NOTICE_ENABLE_FALSE', icon: 'el-icon-tickets', currentName: '공지사항 게시해제', link: '/', isShow: false },
-                { id: 'NOTICE_LIST_ALL', icon: 'el-icon-tickets', currentName: '공지사항', link: '/notice/list', isShow: false },
                 { id: 'NOTICE_LIST', icon: 'el-icon-tickets', currentName: '공지사항 리스트', link: '/notice/list-page', isShow: true },
-                { id: 'NOTICE_LIST_ALL_FILTER', icon: 'el-icon-tickets', currentName: '공지사항 리스트(필터)', link: '/notice/list-filter', isShow: false },
                 { id: 'NOTICE_DETAIL', icon: 'el-icon-tickets', currentName: '공지 상세정보', link: '/', isShow: false },
 
             ]

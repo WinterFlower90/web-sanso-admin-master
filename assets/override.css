@@ -159,7 +159,15 @@ div.in-contents .el-row:last-child {
 }
 
 .el-form-item {
-    margin-bottom: 0 !important;
+    margin-top: 20px;
+    margin-bottom: 20px !important;
+    margin-right: 20px;
+}
+
+.el-form-item-button {
+    margin-top: 20px;
+    margin-bottom: 40px !important;
+    margin-left: -50px;
 }
 
 .el-form-item__error {
@@ -169,10 +177,13 @@ div.in-contents .el-row:last-child {
 }
 
 .el-form-item__label {
-    font-size: 14px !important;
+    font-size: 30px !important;
+    font-weight: 600;
     line-height: 35px !important;
-    color: #333333 !important;
-    padding-right: 5px !important;
+    color: white !important;
+    text-shadow: 2px 2px 6px dodgerblue;
+    padding-left: 100px !important;
+    padding-right: 30px !important;
 }
 
 .el-input__inner {

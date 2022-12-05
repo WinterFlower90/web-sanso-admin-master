@@ -1,15 +1,15 @@
 <template>
-    <div>
+    <div id="container">
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="auto">
             <el-row :gutter="15">
-                <el-col :span="8">
+                <el-col :span="20">
                     <el-form-item label="제목" prop="title">
                         <el-input v-model="ruleForm.title"></el-input>
                     </el-form-item>
                 </el-col>
             </el-row>
             <el-row :gutter="15">
-                <el-col :span="8">
+                <el-col :span="20">
                     <el-form-item label="내용" prop="note">
                         <el-input v-model="ruleForm.note"></el-input>
                     </el-form-item>
@@ -17,9 +17,9 @@
             </el-row>
             <el-row :gutter="15">
                 <el-col>
-                    <el-form-item>
-                        <el-button type="primary" class="size-full" @click="doSetData()">등록</el-button>
-                    </el-form-item>
+                    <el-form-item-button>
+                        <el-button type="primary" class="size-50" @click="doSetData()">등록</el-button>
+                    </el-form-item-button>
                 </el-col>
             </el-row>
         </el-form>
@@ -80,3 +80,25 @@ export default {
     },
 }
 </script>
+
+<style>
+#container {
+    width: 70%;
+    margin: 20.125rem auto 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+#container form{
+    text-align:center;
+    width:100%;
+    background-image: linear-gradient(to right, #bdf2ff, #fffcbd);;
+    opacity:0.93;
+    padding:16px;
+    border:3px solid #2360A5;
+    border-radius: 20px;
+
+}
+
+</style>

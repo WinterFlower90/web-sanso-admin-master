@@ -1,15 +1,15 @@
 <template>
-    <div>
+    <div id="container">
         <div v-if="detailInfo != null">
-            <div>{{ detailInfo.noticeId }} 수정</div>
+            <div class="container-title">{{ detailInfo.noticeId }} 번 공지사항 수정하기</div>
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="auto">
                 <el-row :gutter="15">
-                    <el-col :span="8">
+                    <el-col :span="20">
                         <el-form-item label="내용" prop="note">
                             <el-input v-model="ruleForm.note"></el-input>
                         </el-form-item>
                     </el-col>
-                    <el-col :span="8">
+                    <el-col :span="20">
                         <el-form-item label="제목" prop="title">
                             <el-input v-model="ruleForm.title"></el-input>
                         </el-form-item>
@@ -17,9 +17,9 @@
                 </el-row>
                 <el-row :gutter="15">
                     <el-col>
-                        <el-form-item>
-                            <el-button type="primary" class="size-full" @click="doPutData()">수정</el-button>
-                        </el-form-item>
+                        <el-form-item-button>
+                            <el-button type="primary" class="size-50" @click="doPutData()">수정</el-button>
+                        </el-form-item-button>
                     </el-col>
                 </el-row>
             </el-form>
@@ -112,3 +112,41 @@ export default {
     },
 }
 </script>
+<style>
+
+.container-title {
+    width: 66%;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    opacity: 0.5;
+    margin: 20px auto;
+    overflow: auto;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#container {
+    width: 70%;
+    margin: 20.125rem auto 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+#container form{
+    text-align:center;
+    width:100%;
+    background-image: linear-gradient(to right, #bdf2ff, #fffcbd);;
+    opacity:0.93;
+    padding:16px;
+    border:3px solid #2360A5;
+    border-radius: 20px;
+
+}
+
+</style>

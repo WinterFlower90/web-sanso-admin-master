@@ -8,7 +8,7 @@
             <img class="custom-img" src="/images/back4.jpg" alt="back">
             <div class="custom-description-bk"></div>
             <div class="custom-logo">
-                <img src="/images/logo2.jpg" alt="logo">
+                <img src="/images/1.jpg" alt="logo">
             </div>
 
             <div  class="custom-name">
@@ -20,14 +20,14 @@
             </div>
 
             <div class="custom-botton">
-                <a href="" target="_blank">Read More</a>
+                <a href="https://gitlab.com/hbrotheta" target="_blank">Read More</a>
             </div>
         </div>
         <div class="first custom">
-            <img class="custom-img" src="/images/back7.jpeg" alt="back">
+            <img class="custom-img" src="/images/12.jpg" alt="back">
             <div class="custom-description-bk"></div>
             <div class="custom-logo">
-                <img src="/images/logo1.jpg" alt="logo">
+                <img src="/images/2.jpg" alt="logo">
             </div>
 
             <div class="custom-name">
@@ -39,14 +39,14 @@
             </div>
 
             <div class="custom-botton">
-                <a href="" target="_blank">Read More</a>
+                <a href="https://gitlab.com/sksskek9604" target="_blank">Read More</a>
             </div>
         </div>
         <div class="second custom">
-            <img class="custom-img" src="/images/back6.jpg" alt="back">
+            <img class="custom-img" src="/images/back3.jpg" alt="back">
             <div class="custom-description-bk"></div>
             <div class="custom-logo">
-                <img src="/images/logo3.jpeg" alt="logo">
+                <img src="/images/3.jpg" alt="logo">
             </div>
 
             <div class="custom-name">
@@ -58,7 +58,7 @@
             </div>
 
             <div class="custom-botton">
-                <a href="" target="_blank">Read More</a>
+                <a href="https://github.com/WinterFlower90" target="_blank">Read More</a>
             </div>
         </div>
     </div>

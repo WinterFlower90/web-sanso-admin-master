@@ -12,17 +12,15 @@
             </ul>
         </div>
         <div class="container-audio">
-        <audio controls loop="loop" autoplay>
-            <source src="/audio/2.mp3" type="audio/mp3">
-            <source src="/audio/1.mp3" type="audio/mp3">
-            <source src="/audio/3.mp3" type="audio/mp3">
-            <source src="/audio/4.mp3" type="audio/mp3">
-        </audio>
+            <mini-audio
+                audio-source="/audio/2.mp3"
+            ></mini-audio>
         </div>
     </section>
 </template>
 
 <script>
+
 export default {
     data() {
         return {
@@ -42,7 +40,7 @@ div {
 }
 
 .container-audio {
-    width: 150px;
+    width: 100%;
     height: auto;
     padding: 20px;
     border-radius: 5px;

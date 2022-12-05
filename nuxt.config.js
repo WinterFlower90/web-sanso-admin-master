@@ -35,6 +35,7 @@ export default {
     plugins: [
         '@/plugins/element-ui',
         {src: '@/plugins/global-store-constants.js'},
+        {src: '@/plugins/global-vue-audio-better.js'},
         {src: '@/plugins/axios-authenticated.js'},
         {src: '@/plugins/global-filters.js'},
         {src: '@/plugins/global-the-mask.js'},

@@ -1,6 +1,6 @@
 <template>
     <div class="sq-login-box">
-        <div class="img-box"><img src="/images/security.png" alt="login" /></div>
+        <div class="img-box"><img src="/images/water.jpeg" alt="login" /></div>
         <div class="form-box">
             <el-form class="sq-form-box" :model="ruleForm" :rules="rules" ref="ruleForm">
                 <el-form-item prop="username" class="pb-2 pt-4">

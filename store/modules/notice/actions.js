@@ -17,6 +17,7 @@ export default {
         let paramArray = []
         if (payload.params.monthValue != null) paramArray.push(`dateMonth=${payload.params.monthValue}`)
         if (payload.params.yearValue != null) paramArray.push(`dateYear=${payload.params.yearValue}`)
+        if (payload.params.noticeIsEnableValue != null) paramArray.push(`noticeIsEnable=${payload.params.noticeIsEnableValue}`)
         if (payload.params.searchTitle.length >= 1) paramArray.push(`searchTitle=${payload.params.searchTitle}`)
         let paramText = paramArray.join('&')
 
