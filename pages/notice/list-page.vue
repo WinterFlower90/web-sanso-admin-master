@@ -16,6 +16,14 @@
                 :value="item.monthValue">
             </el-option>
         </el-select>
+        <el-select v-model="noticeValue" placeholder="Select">
+            <el-option
+                v-for="item in noticeOption"
+                :key="item.noticeValue"
+                :label="item.noticeLabel"
+                :value="item.noticeValue">
+            </el-option>
+        </el-select>
         <el-input class="title-search" placeholder="제목 검색" v-model="searchTitle"></el-input>
         <el-button icon="el-icon-search" @click="getList()" circle> 검색 </el-button>
         <el-button type="primary" circle @click.native="moveCreate()">새 공지 등록</el-button>
@@ -35,6 +43,7 @@
                         <th>작성일</th>
                         <th>제목</th>
                         <th>작성자</th>
+                        <th>공지유/무</th>
                         <th>상세</th>
                         <th>수정</th>
                     </tr>
@@ -45,6 +54,7 @@
                         <td>{{item.datePost}}</td>
                         <td>{{ item.title }}</td>
                         <td>{{item.writer}}</td>
+                        <td>{{item.noticeIsEnable}}</td>
                         <td><el-button type="success" icon="el-icon-check" circle @click.native="moveDetail(item.noticeId)"></el-button></td>
                         <td><el-button type="primary" icon="el-icon-edit" circle @click.native="moveEdit(item.noticeId)"></el-button></td>
                     </tr>
@@ -77,6 +87,16 @@ export default {
             pageNum: 1,
             monthValue: moment().format('MM'),
             yearValue: moment().format('YYYY'),
+            noticeOption: [{
+                noticeValue: null,
+                noticeLabel: '전체'
+            }, {
+                noticeValue: 'NOTICE_ENABLE',
+                noticeLabel: '공지중'
+            }, {
+                noticeValue: 'NOTICE_DISABLE',
+                noticeLabel: '해제중'
+            }],
             yearOption: [{
                 yearValue: '2022',
                 yearLabel: '2022년'
@@ -138,6 +158,7 @@ export default {
             let payload = {
                 pageNum: this.pageNum,
                 params: {
+                    noticeValue: this.noticeValue,
                     searchTitle: this.searchTitle,
                     yearValue: this.isNumber(this.yearValue) ? Number(this.yearValue) : null,
                     monthValue: this.isNumber(this.monthValue) ? Number(this.monthValue) : null,
@@ -173,6 +194,9 @@ export default {
         }
     },
     watch: {
+        noticeValue() {
+            this.getList()
+        },
         monthValue() {
             this.getList()
         },
@@ -210,14 +234,14 @@ body {
 }
 
 table {
-    width: 800px;
+    width: 1000px;
     border-collapse: collapse;
     overflow: auto;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 table::after {
-    width: 800px;
+    width: 1000px;
     border-collapse: collapse;
     position: absolute;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);

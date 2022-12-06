@@ -12,9 +12,12 @@
             </ul>
         </div>
         <div class="container-audio">
-            <mini-audio
-                audio-source="/audio/2.mp3"
-            ></mini-audio>
+        <audio autoplay>
+            <source src="/audio/2.mp3" type="audio/mp3" />
+            <source src="/audio/1.mp3" type="audio/mp3" />
+            <source src="/audio/3.mp3" type="audio/mp3" />
+            <source src="/audio/4.mp3" type="audio/mp3" />
+        </audio>
         </div>
     </section>
 </template>
@@ -40,7 +43,7 @@ div {
 }
 
 .container-audio {
-    width: 100%;
+    width: 30%;
     height: auto;
     padding: 20px;
     border-radius: 5px;

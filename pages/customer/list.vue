@@ -1,19 +1,46 @@
 <template>
     <div>
-        <div
-            v-for="(item, index) in list"
-            v-bind:key="index"
-        >
-            id : {{ item.id }}<br />
-            아이디 : {{item.username}}<br />
-            닉네임 : {{ item.nickName }}<br />
-            평점 : {{item.avgStarRating}} <br />
-            패널티 : {{item.penalty}} <br />
-            <el-button type="success" icon="el-icon-check" circle @click.native="moveDetail(item.id)"></el-button>
-            <el-button type="primary" icon="el-icon-edit" circle @click.native="moveEdit(item.id)"></el-button>
-            <el-button type="danger" icon="el-icon-delete" circle @click.native="delData(item.id)"></el-button>
-            <hr />
+        <el-select v-model="value" placeholder="Select">
+            <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+            </el-option>
+        </el-select>
+        <div v-for="(item, index) in list">
+            <div class="container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>아이디</th>
+                        <th>별명</th>
+                        <th>평점</th>
+                        <th>패널티</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="(item, index) in list" v-bind:key="index">
+                        <td>{{ item.id }}</td>
+                        <td>{{item.username}}</td>
+                        <td>{{ item.nickName }}</td>
+                        <td>{{item.avgStarRating}}</td>
+                        <td>{{item.penalty}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+        <el-pagination
+            background
+            small
+            layout="prev, pager, next"
+            :total="totalItemCount"
+            :current-page="pageNum"
+            @current-change="setPage"
+        >
+        </el-pagination>
     </div>
 </template>
 <script>
@@ -22,16 +49,33 @@ export default {
     data() {
         return {
             list: [],
-            pageNum : 1,
-            memberInformationType : 'ALL'
+            totalItemCount: 0,
+            pageNum: 1,
+            value: 'ALL',
+            options: [{
+                value: 'ALL',
+                label: '전체'
+            }, {
+                value: 'BLACK_LIST',
+                label: '블랙회원'
+            }, {
+                value: 'STAR_POINT',
+                label: '별점'
+            }]
         }
+
     },
     methods: {
+        setPage(pageNum) {
+            this.pageNum = pageNum
+            this.getList()
+        },
         getList() {
             this.$store.commit(this.$customLoadingConstants.FETCH_LOADING_SHOW, true)
-            this.$store.dispatch(this.$testDataConstants.DO_LIST, {pageNum: this.pageNum, searchType: this.memberInformationType})
+            this.$store.dispatch(this.$testDataConstants.DO_LIST, {pageNum: this.pageNum, searchType: this.value})
                 .then((res) => {
                     this.list = res.data.list
+                    this.totalItemCount = res.data.totalItemCount
                     this.$store.commit(this.$customLoadingConstants.FETCH_LOADING_SHOW, false)
                 })
                 .catch((err) => {
@@ -63,6 +107,11 @@ export default {
         //     this.$router.push(`${linkBaseUrl}${id}`)
         // }
     },
+    watch: {
+        value() {
+            this.getList()
+        }
+    },
     created() {
         this.getList()
     },
@@ -73,56 +122,4 @@ export default {
 }
 </script>
 <style>
-.card {
-    background-color: #fff;
-    max-width: 360px;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    border-radius: 2rem;
-    box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
-    opacity: 0.7;
-}
-
-.card .banner {
-    background-image: url("static/images/14.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 11rem;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    box-sizing: border-box;
-}
-.card h2.name {
-    text-align: center;
-    padding: 0 2rem 0.5rem;
-    margin: 0;
-}
-
-.card h1.name {
-    text-align: center;
-    padding: 0 0 2.5rem;
-    margin: 0;
-}
-
-.card .title {
-    color: #a0a0a0;
-    font-size: 0.85rem;
-    text-align: center;
-    padding: 1.2rem 1.2rem 0.2rem;
-}
-
-.card .actions .follow-info {
-    padding: 0 0 1rem;
-    display: flex;
-}
-
-.card .actions .follow-info h2 {
-    text-align: center;
-    width: 50%;
-    margin: 0;
-    box-sizing: border-box;
-}
 </style>
