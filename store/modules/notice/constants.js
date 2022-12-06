@@ -10,8 +10,6 @@ export default {
     FETCH_NOTICE_LIST_ALL: 'notice/fetchNoticeListAll',
     GET_NOTICE_LIST_ALL: 'notice/getNoticeListAll',
 
-//
-
     DO_NOTICE_LIST: 'notice/doNoticeList',
     FETCH_NOTICE_LIST: 'notice/fetchNoticeList',
     GET_NOTICE_LIST: 'notice/getNoticeList',

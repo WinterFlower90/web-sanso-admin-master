@@ -13,16 +13,23 @@ export default {
     [Constants.DO_NOTICE_LIST_ALL]: (store) => {
         return axios.get(apiUrls.DO_NOTICE_LIST_ALL)
     },
+
     [Constants.DO_NOTICE_LIST]: (store, payload) => {
         let paramArray = []
-        if (payload.params.monthValue != null) paramArray.push(`dateMonth=${payload.params.monthValue}`)
-        if (payload.params.yearValue != null) paramArray.push(`dateYear=${payload.params.yearValue}`)
-        if (payload.params.noticeValue != null) paramArray.push(`noticeIsEnable=${payload.params.noticeValue}`)
-        if (payload.params.searchTitle.length >= 1) paramArray.push(`searchTitle=${payload.params.searchTitle}`)
-        let paramText = paramArray.join('&')
+        if (payload.params.monthValue != null) paramArray.push(`dateMonth=${payload.params.monthValue}`) //'월' 값이 null이 아니면 paramArray에 '월' 값을 담는다.
+        if (payload.params.yearValue != null) paramArray.push(`dateYear=${payload.params.yearValue}`) //'연' 값이 null이 아니면 paramArray에 '연' 값을 담는다.
+        if (payload.params.noticeValue != null) paramArray.push(`noticeIsEnable=${payload.params.noticeValue}`) //'유효공지' 값이 null이 아니면 paramArray에 '유효공지' 값을 담는다.
+        if (payload.params.searchTitle.length >= 1) paramArray.push(`searchTitle=${payload.params.searchTitle}`) //'검색' 값이 1 이상이면 paramArray에 '검색' 값을 담는다.
+        let paramText = paramArray.join('&') //paramText에 paramArray 값을 join한다.
 
         return axios.get(apiUrls.DO_NOTICE_LIST.replace('{pageNum}', payload.pageNum) + '?' + paramText)
+        // 페이징된 공지사항 리스트를 가져오기. - api에서 RequestParam 으로 받는 required 값을 payload에 받는다.
+        // v1/notice/list/search/{pageNum}
+        // axios.get을 이용하여 공지사항 리스트를 받아오고, {pageNum}은 payload의 pageNum값으로 바꿔준다.
     },
+
+
+
     [Constants.DO_CREATE]: (store, payload) => {
         return axios.post(apiUrls.DO_CREATE, payload)
     },

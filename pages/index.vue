@@ -2,27 +2,34 @@
     <div>
         <div class="container-title">
             <h1>MY FAVORITE THING IS A WALK</h1>
+            <!--산책메이트 매칭 프로그램 산소의 소개 : 내가 가장 좋아하는건 산책이야-->
         </div>
 
         <div class="third custom">
             <img class="custom-img" src="/images/back4.jpg" alt="back">
+            <!--배너 이미지-->
             <div class="custom-description-bk"></div>
             <div class="custom-logo">
                 <img src="/images/1.jpg" alt="logo">
+                <!--로고 이미지-->
             </div>
 
             <div  class="custom-name">
                 <p>Heo Hyung-Goo</p>
+                <!--각 조원의 이름-->
             </div>
 
             <div class="custom-description">
                 <p><b>초대 멤버 [허형구]</b><br> 운동형 외톨이 <br> 섬세한 코딩능력과 멈추지 않는 끈기로 산소 개발에 임했습니다.  <br> 우리조의 브레인</p>
+                <!--각 조원의 소개사항-->
             </div>
 
             <div class="custom-botton">
                 <a href="https://gitlab.com/hbrotheta" target="_blank">Read More</a>
+                <!--Read More 버튼을 누르면 해당 조원의 깃페이지로 넘어감-->
             </div>
         </div>
+
         <div class="first custom">
             <img class="custom-img" src="/images/12.jpg" alt="back">
             <div class="custom-description-bk"></div>
@@ -32,14 +39,16 @@
 
             <div class="custom-name">
                 <p>An Min-Hee</p>
+                <!--각 조원의 이름-->
             </div>
 
             <div class="custom-description">
                 <p><b>초대 멤버 [안민희]</b><br> 핑크늑대 <br> 꼼꼼한 검증과 센스넘치는 아이디어로 산소 개발에 임했습니다.  <br> 우리조의 팀장님</p>
+                <!--각 조원의 소개사항-->
             </div>
-
             <div class="custom-botton">
                 <a href="https://gitlab.com/sksskek9604" target="_blank">Read More</a>
+                <!--Read More 버튼을 누르면 해당 조원의 깃페이지로 넘어감-->
             </div>
         </div>
         <div class="second custom">
@@ -51,14 +60,16 @@
 
             <div class="custom-name">
                 <p>Park Joo-eul</p>
+                <!--각 조원의 이름-->
             </div>
 
             <div class="custom-description">
                 <p><b>초대 멤버 [박주을]</b><br> 키보드샷건 장전 <br> 디자인찾아 삼만리로 산소 개발에 임했습니다.  <br> 우리조의 디자이너</p>
+                <!--각 조원의 소개사항-->
             </div>
-
             <div class="custom-botton">
                 <a href="https://github.com/WinterFlower90" target="_blank">Read More</a>
+                <!--Read More 버튼을 누르면 해당 조원의 깃페이지로 넘어감-->
             </div>
         </div>
     </div>

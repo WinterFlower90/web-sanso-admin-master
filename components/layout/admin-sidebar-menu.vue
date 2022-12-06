@@ -14,10 +14,12 @@
         <div class="container-audio">
         <audio autoplay>
             <source src="/audio/2.mp3" type="audio/mp3" />
-            <source src="/audio/1.mp3" type="audio/mp3" />
             <source src="/audio/3.mp3" type="audio/mp3" />
             <source src="/audio/4.mp3" type="audio/mp3" />
         </audio>
+            <audio>
+                <source src="/audio/1.mp3" type="audio/mp3" />
+            </audio>
         </div>
     </section>
 </template>

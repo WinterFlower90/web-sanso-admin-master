@@ -158,14 +158,14 @@ export default {
             let payload = {
                 pageNum: this.pageNum,
                 params: {
-                    noticeValue: this.noticeValue,
-                    searchTitle: this.searchTitle,
-                    yearValue: this.isNumber(this.yearValue) ? Number(this.yearValue) : null,
-                    monthValue: this.isNumber(this.monthValue) ? Number(this.monthValue) : null,
+                    noticeValue: this.noticeValue, //공지사항 게시 유/무
+                    searchTitle: this.searchTitle, //공지사항 제목중 입력에 해당하는 값으로 검색
+                    yearValue: this.isNumber(this.yearValue) ? Number(this.yearValue) : null, //'연'에 해당하는 값을 number로 캐스팅.
+                    monthValue: this.isNumber(this.monthValue) ? Number(this.monthValue) : null, //'월'에 해당하는 값을 number로 캐스팅.
                 }
             }
-            this.$store.commit(this.$customLoadingConstants.FETCH_LOADING_SHOW, true)
-            this.$store.dispatch(this.$noticeConstants.DO_NOTICE_LIST, payload)
+            this.$store.commit(this.$customLoadingConstants.FETCH_LOADING_SHOW, true) //mutations 데이터, loading show 레이아웃과 연결.
+            this.$store.dispatch(this.$noticeConstants.DO_NOTICE_LIST, payload) //actions 데이터 가져오기
                 .then((res) => {
                     this.list = res.data.list
                     this.totalItemCount = res.data.totalItemCount
@@ -180,17 +180,15 @@ export default {
             return !isNaN(Number(text))
         },
         moveCreate() {
-            this.$router.push('/notice/form')
-            //     let linkBaseUrl = '/customer/detail/'
-            //     this.$router.push(`${linkBaseUrl}${id}`)
+            this.$router.push('/notice/form') //공지사항 등록
         },
         moveDetail(noticeId) {
             let linkBaseUrl = '/notice/detail/'
-            this.$router.push(`${linkBaseUrl}${noticeId}`)
+            this.$router.push(`${linkBaseUrl}${noticeId}`) //공지사항 상세보기
         },
         moveEdit(noticeId) {
             let linkBaseUrl = '/notice/edit/'
-            this.$router.push(`${linkBaseUrl}${noticeId}`)
+            this.$router.push(`${linkBaseUrl}${noticeId}`) //공지사항 수정
         }
     },
     watch: {
