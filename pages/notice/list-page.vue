@@ -85,6 +85,7 @@ export default {
             searchTitle: [],
             totalItemCount: 0,
             pageNum: 1,
+            noticeValue: null,
             monthValue: moment().format('MM'),
             yearValue: moment().format('YYYY'),
             noticeOption: [{
